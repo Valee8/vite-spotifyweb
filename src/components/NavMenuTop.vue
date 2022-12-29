@@ -1,7 +1,7 @@
 <script>
 
 export default {
-    name: "SideMenuTop",
+    name: "NavMenuTop",
     data() {
         return {
             linksMenuTop: [
@@ -89,13 +89,8 @@ export default {
     }
 
     .menu-links {
-        list-style-type: none;
-        font-size: 0.8rem;
 
         li {
-            padding-left: 18px;
-            height: 34px;
-            line-height: 34px;
 
             &.selected {
                 border-left: 3px solid #adff2f;
