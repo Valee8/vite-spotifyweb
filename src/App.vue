@@ -2,22 +2,30 @@
 import AppHeader from './components/AppHeader.vue'
 import AppFooter from './components/AppFooter.vue'
 import AppNav from './components/AppNav.vue'
+import AppMain from './components/AppMain.vue'
 
 
 export default {
   components: {
     AppHeader,
     AppFooter,
-    AppNav
+    AppNav,
+    AppMain
   }
 }
 </script>
 
 <template>
 
+  <AppNav />
+
+
   <AppHeader />
 
-  <AppNav />
+  <main>
+    <AppMain />
+  </main>
+
 
   <AppFooter />
 
