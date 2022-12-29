@@ -1,12 +1,14 @@
 <script>
 
-import SideMenuTop from '../components/SideMenuTop.vue'
+import NavMenuTop from './NavMenuTop.vue'
+import NavMenuCenter from './NavMenuCenter.vue'
 
 
 export default {
     name: "AppNav",
     components: {
-        SideMenuTop
+        NavMenuTop,
+        NavMenuCenter,
     }
 }
 
@@ -16,7 +18,10 @@ export default {
 <template>
 
     <nav id="side-menu">
-        <SideMenuTop />
+        <NavMenuTop />
+
+        <NavMenuCenter />
+
     </nav>
 
 </template>
