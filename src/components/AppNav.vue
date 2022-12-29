@@ -1,7 +1,13 @@
 <script>
 
+import SideMenuTop from '../components/SideMenuTop.vue'
+
+
 export default {
     name: "AppNav",
+    components: {
+        SideMenuTop
+    }
 }
 
 </script>
@@ -10,7 +16,7 @@ export default {
 <template>
 
     <nav id="side-menu">
-        Nav
+        <SideMenuTop />
     </nav>
 
 </template>
