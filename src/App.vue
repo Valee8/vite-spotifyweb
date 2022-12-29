@@ -49,4 +49,15 @@ export default {
     width: calc(100% - 230px);
   }
 }
+
+.menu-links {
+  list-style-type: none;
+  font-size: 0.8rem;
+
+  li {
+    padding-left: 18px;
+    height: 34px;
+    line-height: 34px;
+  }
+}
 </style>
