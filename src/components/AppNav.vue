@@ -2,6 +2,7 @@
 
 import NavMenuTop from './NavMenuTop.vue'
 import NavMenuCenter from './NavMenuCenter.vue'
+import NavMenuBottom from './NavMenuBottom.vue'
 
 
 export default {
@@ -9,6 +10,7 @@ export default {
     components: {
         NavMenuTop,
         NavMenuCenter,
+        NavMenuBottom
     }
 }
 
@@ -22,6 +24,7 @@ export default {
 
         <NavMenuCenter />
 
+        <NavMenuBottom />
     </nav>
 
 </template>
