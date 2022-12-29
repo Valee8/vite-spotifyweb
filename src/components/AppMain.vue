@@ -21,5 +21,9 @@ main {
     height: calc(100vh - 180px);
     overflow-y: auto;
     padding: 20px;
+
+    img {
+        max-width: 100%;
+    }
 }
 </style>
