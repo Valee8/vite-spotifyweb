@@ -21,13 +21,15 @@ export default {
 
     <AppNav />
 
+    <div class="container-right">
 
-    <AppHeader />
+      <AppHeader />
 
-    <main>
-      <AppMain />
-    </main>
+      <main>
+        <AppMain />
+      </main>
 
+    </div>
 
     <AppFooter />
   </div>
