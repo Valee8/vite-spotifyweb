@@ -48,6 +48,14 @@ export default {
             </li>
         </ul>
 
+        <!-- Titolo -->
+        <h3>
+            PLAYLIST
+        </h3>
+
+        <a class="add-playlist" href="#">
+            <font-awesome-icon icon="fa-solid fa-plus" class="icon-plus" /> <span>Crea Playlist</span>
+        </a>
 
     </div>
 
@@ -116,6 +124,32 @@ export default {
             span {
                 padding-left: 4px;
             }
+        }
+    }
+
+    h3 {
+        color: #fff;
+        padding: 18px 0 10px 18px;
+        font-size: 0.87rem;
+    }
+
+    .add-playlist {
+        font-size: 0.9rem;
+        padding-left: 18px;
+
+        &:hover {
+            .icon-plus {
+                background: #fff;
+            }
+        }
+
+        .icon-plus {
+            background: #a3a3a3;
+            padding: 10px;
+            font-size: 1.1rem;
+            color: #000;
+            margin-right: 7px;
+            vertical-align: middle;
         }
     }
 }
