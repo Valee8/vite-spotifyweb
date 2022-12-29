@@ -39,4 +39,14 @@ export default {
 <style lang="scss">
 @use '../src/styles/general.scss' as *;
 @use '../src/styles/partials/variables' as *;
+
+.container-flex {
+  display: flex;
+  flex-wrap: wrap;
+
+
+  .container-right {
+    width: calc(100% - 230px);
+  }
+}
 </style>
