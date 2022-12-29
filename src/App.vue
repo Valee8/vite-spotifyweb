@@ -17,17 +17,20 @@ export default {
 
 <template>
 
-  <AppNav />
+  <div class="container-flex">
+
+    <AppNav />
 
 
-  <AppHeader />
+    <AppHeader />
 
-  <main>
-    <AppMain />
-  </main>
+    <main>
+      <AppMain />
+    </main>
 
 
-  <AppFooter />
+    <AppFooter />
+  </div>
 
 </template>
 
