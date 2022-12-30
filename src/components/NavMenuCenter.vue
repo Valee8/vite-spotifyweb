@@ -44,7 +44,7 @@ export default {
 <template>
 
     <!-- Link menu -->
-    <ul class="menu-links">
+    <ul class="nav-links">
 
         <li v-for="(links, index) in linksMenuCenter" :key="index">
             <a :href="links.url">{{ links.text }}</a>
@@ -58,7 +58,7 @@ export default {
 @use './src/styles/general.scss' as *;
 @use './src/styles/partials/variables' as *;
 
-.menu-links {
+.nav-links {
     flex-grow: 1;
     overflow-y: auto;
     font-weight: 700;

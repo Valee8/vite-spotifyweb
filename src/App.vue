@@ -50,7 +50,7 @@ export default {
   }
 }
 
-.menu-links {
+.nav-links {
   list-style-type: none;
   font-size: 0.8rem;
 

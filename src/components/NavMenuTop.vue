@@ -39,7 +39,7 @@ export default {
         <!-- Logo mobile version -->
         <img class="logo-small" src="/img/logo-small.svg" alt="logo">
 
-        <ul class="menu-links">
+        <ul class="nav-links">
             <li :class="{ selected: links.current }" v-for="(links, index) in linksMenuTop" :key="index">
                 <a :href="links.url">
                     <img :src="links.img" :alt="links.text">
@@ -88,7 +88,7 @@ export default {
         display: none;
     }
 
-    .menu-links {
+    .nav-links {
 
         li {
 
