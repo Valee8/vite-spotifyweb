@@ -1,11 +1,13 @@
 <script>
 
 import FooterLeft from './FooterLeft.vue'
+import FooterCenter from './FooterCenter.vue'
 
 export default {
     name: "AppFooter",
     components: {
-        FooterLeft
+        FooterLeft,
+        FooterCenter
     }
 }
 
@@ -16,6 +18,7 @@ export default {
 
     <footer>
         <FooterLeft />
+        <FooterCenter />
     </footer>
 
 </template>
