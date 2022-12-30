@@ -60,4 +60,52 @@ export default {
     line-height: 34px;
   }
 }
+
+.list-footer {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.bar {
+  width: 100%;
+  background-color: #606060;
+  border-radius: 3px;
+  height: 4px;
+  display: block;
+
+  .bar-completed {
+    background-color: #c1c1c1;
+    width: 22%;
+    height: 4px;
+    border-radius: 3px;
+    position: relative;
+
+    .bar-circle {
+      background-color: #fdfdfe;
+      padding: 4px;
+      height: 13px;
+      width: 13px;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      display: none;
+    }
+  }
+
+  &:hover {
+    .bar-completed {
+      background-color: #c2f962;
+    }
+
+    .bar-circle {
+      display: block;
+    }
+
+  }
+}
 </style>

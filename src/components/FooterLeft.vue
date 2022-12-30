@@ -56,11 +56,6 @@ export default {
     align-items: center;
 
     .list-footer {
-        display: flex;
-        align-items: center;
-        list-style-type: none;
-        font-size: 0.8rem;
-        font-weight: 700;
         gap: 10px;
 
         img {
