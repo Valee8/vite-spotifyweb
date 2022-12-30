@@ -1,7 +1,12 @@
 <script>
 
+import FooterLeft from './FooterLeft.vue'
+
 export default {
     name: "AppFooter",
+    components: {
+        FooterLeft
+    }
 }
 
 </script>
@@ -10,7 +15,7 @@ export default {
 <template>
 
     <footer>
-        Sono un footer
+        <FooterLeft />
     </footer>
 
 </template>
