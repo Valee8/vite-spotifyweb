@@ -2,10 +2,14 @@
 
 import MainLinks from './MainLinks.vue'
 
+import RecentlyPlayed from './RecentlyPlayed.vue'
+
+
 export default {
     name: "AppMain",
     components: {
         MainLinks,
+        RecentlyPlayed
 
     }
 }
@@ -16,6 +20,8 @@ export default {
 <template>
 
     <MainLinks />
+
+    <RecentlyPlayed />
 
 </template>
 
