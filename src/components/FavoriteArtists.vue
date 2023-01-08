@@ -18,7 +18,7 @@ export default {
 
     <section>
         <!-- Titolo -->
-        <h2>
+        <h2 class="title">
             Artisti preferiti
         </h2>
 
