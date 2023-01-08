@@ -19,7 +19,7 @@ export default {
     <!-- Inizio prima sezione -->
     <section>
         <!-- Titolo -->
-        <h2>
+        <h2 class="title">
             Recently Played
         </h2>
 
