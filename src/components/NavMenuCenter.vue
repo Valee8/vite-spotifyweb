@@ -44,7 +44,7 @@ export default {
 <template>
 
     <!-- Link menu -->
-    <ul class="nav-links">
+    <ul class="nav-links second">
 
         <li v-for="(links, index) in linksMenuCenter" :key="index">
             <a :href="links.url">{{ links.text }}</a>
