@@ -43,4 +43,11 @@ export default {
     height: calc(100vh - 90px);
     overflow: hidden;
 }
+
+@media all and (max-width: 600px) {
+    #side-menu {
+        width: 40px;
+        text-align: center;
+    }
+}
 </style>
