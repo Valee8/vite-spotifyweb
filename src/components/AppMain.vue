@@ -6,13 +6,17 @@ import RecentlyPlayed from './RecentlyPlayed.vue'
 
 import FavoriteArtists from './FavoriteArtists.vue'
 
+import MostListened from './MostListened.vue'
+
+
 
 export default {
     name: "AppMain",
     components: {
         MainLinks,
         RecentlyPlayed,
-        FavoriteArtists
+        FavoriteArtists,
+        MostListened
 
     }
 }
@@ -27,6 +31,8 @@ export default {
     <RecentlyPlayed />
 
     <FavoriteArtists />
+
+    <MostListened />
 
 </template>
 
