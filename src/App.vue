@@ -54,11 +54,28 @@ export default {
       }).catch(function (error) {
         console.error(error);
       });
+    },
+    getMostListened() {
+      const options = {
+        method: 'GET',
+        url: 'https://spotify81.p.rapidapi.com/top_20_by_monthly_listeners',
+        headers: {
+          'X-RapidAPI-Key': 'baf622d4edmshd85bb4f97fcc4aep15feaajsne026f2c5830b',
+          'X-RapidAPI-Host': 'spotify81.p.rapidapi.com'
+        }
+      };
+
+      axios.request(options).then(function (response) {
+        store.moreListened = response.data;
+      }).catch(function (error) {
+        console.error(error);
+      });
     }
   },
   mounted() {
     this.getAlbums();
     this.getArtists();
+    this.getMostListened();
   }
 }
 </script>
