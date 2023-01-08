@@ -47,4 +47,24 @@ header {
         }
     }
 }
+
+@media all and (max-width: 1200px) {
+
+    header {
+        .button-upgrade {
+            font-size: 0.7rem;
+            padding: 6px 20px;
+        }
+    }
+
+}
+
+@media all and (max-width: 600px) {
+    header {
+        .button-upgrade {
+            font-size: 0.5rem;
+            padding: 6px 20px;
+        }
+    }
+}
 </style>
