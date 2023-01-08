@@ -118,69 +118,67 @@ main {
     max-width: 100%;
   }
 
-  section {
-    h2 {
-      color: #fff;
-      font-size: 1.4rem;
-      padding-top: 40px;
-    }
+  .title {
+    color: #fff;
+    font-size: 1.4rem;
+    padding-top: 40px;
+  }
 
-    .subtitle {
-      color: #7C7E83;
-      font-size: 0.7rem;
-      font-weight: 700;
-      padding-top: 5px;
-    }
+  .subtitle {
+    color: #7C7E83;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding-top: 5px;
+  }
 
-    .list-cards {
-      display: flex;
-      flex-wrap: wrap;
-      padding-top: 30px;
-      color: #fff;
+  .list-cards {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    color: #fff;
 
-      .card {
-        width: calc(100% / 6);
-        text-align: center;
-        padding-right: 15px;
-        padding-bottom: 25px;
+    .card {
+      width: calc(100% / 6);
+      text-align: center;
+      padding-right: 15px;
+      padding-bottom: 25px;
 
-        .subtitle {
-          padding-top: 0;
-        }
+      .subtitle {
+        padding-top: 0;
+      }
 
-        img {
-          height: 193px;
-          object-fit: cover;
-        }
+      img {
+        height: 193px;
+        object-fit: cover;
+      }
 
-        h3 {
+      h3 {
+        color: #fff;
+        font-size: 1rem;
+        padding: 10px 5px 0 5px;
+      }
+
+      .card-img {
+        position: relative;
+
+        .icon-circle-play {
+
           color: #fff;
-          font-size: 1rem;
-          padding: 10px 5px 0 5px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 3.5rem;
+          display: none;
         }
 
-        .card-img {
-          position: relative;
-
-          .icon-circle-play {
-
-            color: #fff;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 3.5rem;
-            display: none;
+        &:hover {
+          img {
+            filter: brightness(83%);
           }
 
-          &:hover {
-            img {
-              filter: brightness(83%);
-            }
-
-            .icon-circle-play {
-              display: block;
-            }
+          .icon-circle-play {
+            display: block;
           }
         }
       }
@@ -233,6 +231,28 @@ main {
       display: block;
     }
 
+  }
+}
+
+@media all and (max-width: 600px) {
+  .container-flex {
+    .container-right {
+      width: calc(100% - 40px);
+    }
+  }
+
+  .list-footer {
+    font-size: 0.6rem;
+  }
+
+  main {
+    section {
+      .list-cards {
+        .card {
+          width: calc(100% / 2);
+        }
+      }
+    }
   }
 }
 </style>
