@@ -93,4 +93,44 @@ export default {
     }
 
 }
+
+@media all and (max-width: 1200px) {
+    .footer-left {
+        .list-footer {
+            .song {
+                padding-right: 6px;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 600px) {
+    .footer-left {
+        .list-footer {
+            gap: 8px;
+
+            img {
+                width: 20px;
+            }
+
+            &.icons {
+                gap: 4px;
+                flex-direction: column;
+
+                .icon-heart,
+                .icon-folder {
+                    font-size: 0.6rem;
+                }
+            }
+
+            .song {
+                padding-right: 6px;
+            }
+
+            .song-name {
+                font-size: 0.4rem;
+            }
+        }
+    }
+}
 </style>
