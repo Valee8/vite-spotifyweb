@@ -87,4 +87,31 @@ export default {
         }
     }
 }
+
+@media all and (max-width: 600px) {
+    .menu-bottom {
+        padding: 0 0 8px 0;
+
+        .install {
+            padding-bottom: 0;
+
+            span {
+                display: none;
+            }
+        }
+
+        .profile-user {
+            border-top: 0;
+
+            img {
+                width: 20px;
+                height: 20px;
+            }
+
+            span {
+                display: none;
+            }
+        }
+    }
+}
 </style>

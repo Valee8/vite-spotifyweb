@@ -71,4 +71,12 @@ export default {
         }
     }
 }
+
+@media all and (max-width: 600px) {
+    .nav-links {
+        &.second {
+            display: none;
+        }
+    }
+}
 </style>

@@ -148,4 +148,50 @@ export default {
         }
     }
 }
+
+@media all and (max-width: 600px) {
+    .menu-top {
+        flex-grow: 1;
+
+        .add-playlist {
+            display: none;
+        }
+
+        h3 {
+            display: none;
+        }
+
+        .nav-links {
+            span {
+                display: none;
+            }
+        }
+
+        .logo-small {
+            display: block;
+            padding-top: 2px;
+            width: 20px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: none;
+        }
+
+        .nav-links {
+
+            li {
+                padding: 0;
+
+                &.selected {
+                    border-left: 0;
+                }
+            }
+
+            .logo {
+                padding: 0;
+            }
+        }
+    }
+}
 </style>
