@@ -68,4 +68,12 @@ export default {
         gap: 17px;
     }
 }
+
+@media all and (max-width: 600px) {
+    .footer-right {
+        .list-footer {
+            gap: 8px;
+        }
+    }
+}
 </style>
