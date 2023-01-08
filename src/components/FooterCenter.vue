@@ -118,4 +118,28 @@ export default {
     }
 
 }
+
+@media all and (max-width: 600px) {
+    .footer-center {
+        .player-top {
+            gap: 15px;
+            font-size: 0.6rem;
+
+            .play {
+                font-size: 1.4rem;
+            }
+        }
+
+        .player-bottom {
+            gap: 8px;
+            font-size: 0.5rem;
+        }
+    }
+}
+
+@media all and (max-width: 1200px) {
+    .footer-center {
+        padding: 0 15px;
+    }
+}
 </style>
