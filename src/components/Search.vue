@@ -36,7 +36,14 @@ form {
     position: relative;
     line-height: 34px;
 
+    &:hover {
+        .icon-search {
+            filter: invert(0%);
+        }
+    }
+
     .icon-search {
+        cursor: pointer;
         width: 25px;
         filter: invert(25%);
         position: absolute;
@@ -72,14 +79,9 @@ form {
     form {
 
         .icon-search {
-            cursor: pointer;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-
-            &:hover {
-                filter: invert(0%);
-            }
         }
 
         .input-search {
