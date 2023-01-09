@@ -1,0 +1,61 @@
+<script>
+
+import { store } from '../store.js';
+
+export default {
+    name: "RecentlyPlayed",
+    data() {
+        return {
+            store,
+        }
+    },
+    computed: {
+        getTitle() {
+            if (store.options.includes("Best")) {
+                this.title = "Trending";
+            }
+            else {
+                this.title = "Results";
+            }
+            return this.title;
+        }
+    },
+}
+
+</script>
+
+
+<template>
+
+    <!-- Inizio prima sezione -->
+    <section>
+
+        <!-- Titolo -->
+        <h2 class="title">
+            {{ getTitle }}
+        </h2>
+
+        <!-- Lista card -->
+        <div class="list-cards">
+
+            <div class="card" v-for="album in store.cardList">
+
+                <a :href="album.shareUrl" target="_blank">
+                    <img :src="album.cover[0].url">
+                </a>
+
+                <h1>
+                    {{ album.name }}
+                </h1>
+
+            </div>
+        </div>
+    </section>
+
+
+</template>
+
+<style lang="scss" scoped>
+@use './src/styles/general.scss' as *;
+@use './src/styles/partials/variables' as *;
+</style>
