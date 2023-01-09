@@ -41,7 +41,11 @@ export default {
             <div class="card" v-for="album in store.cardList">
 
                 <a :href="album.shareUrl" target="_blank">
-                    <img :src="album.cover[0].url">
+                    <div class="card-img">
+                        <img :src="album.cover[0].url">
+
+                        <font-awesome-icon icon="fa-regular fa-circle-play" class="icon-circle-play" />
+                    </div>
                 </a>
 
                 <h1>
