@@ -1,14 +1,33 @@
 <script>
 
+import Search from '../components/Search.vue'
+
+import axios from 'axios';
+
+import { store } from '../store.js';
+
 export default {
     name: "NavMenuTop",
+    components: {
+        Search
+    },
     data() {
         return {
+            store,
+            options: {
+                method: 'GET',
+                url: 'https://spotify-scraper.p.rapidapi.com/v1/search',
+                params: { term: '', type: 'album', limit: '12' },
+                headers: {
+                    'X-RapidAPI-Key': 'baf622d4edmshd85bb4f97fcc4aep15feaajsne026f2c5830b',
+                    'X-RapidAPI-Host': 'spotify-scraper.p.rapidapi.com'
+                }
+            },
             linksMenuTop: [
                 {
                     text: 'Home',
                     img: '/img/home.svg',
-                    url: '#',
+                    url: '/',
                     current: true
                 },
                 {
@@ -23,6 +42,33 @@ export default {
                 }
             ]
         }
+    },
+    methods: {
+        getCards() {
+
+            if (store.search === '') {
+                this.options.params.term = "Best";
+            }
+            else {
+                this.options.params.term = store.search;
+            }
+
+            store.options = this.options.params.term;
+
+            console.log("Store", store.search);
+
+            axios.request(this.options).then(function (response) {
+                store.cardList = response.data.albums.items;
+
+                console.log(store.cardList);
+
+            }).catch(function (error) {
+                console.error(error);
+            });
+        },
+    },
+    mounted() {
+        this.getCards();
     }
 }
 
@@ -41,10 +87,11 @@ export default {
 
         <ul class="nav-links">
             <li :class="{ selected: links.current }" v-for="(links, index) in linksMenuTop" :key="index">
-                <a :href="links.url">
+                <a :href="links.url" v-if="links.text != 'Cerca'">
                     <img :src="links.img" :alt="links.text">
                     <span>{{ links.text }}</span>
                 </a>
+                <Search v-else @search="getCards" />
             </li>
         </ul>
 
