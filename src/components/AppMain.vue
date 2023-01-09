@@ -2,21 +2,16 @@
 
 import MainLinks from './MainLinks.vue'
 
-import RecentlyPlayed from './RecentlyPlayed.vue'
+import YourSearches from './YourSearches.vue'
 
 import FavoriteArtists from './FavoriteArtists.vue'
-
-import MostListened from './MostListened.vue'
-
-
 
 export default {
     name: "AppMain",
     components: {
         MainLinks,
-        RecentlyPlayed,
+        YourSearches,
         FavoriteArtists,
-        MostListened
 
     }
 }
@@ -28,11 +23,9 @@ export default {
 
     <MainLinks />
 
-    <RecentlyPlayed />
+    <YourSearches />
 
     <FavoriteArtists />
-
-    <MostListened />
 
 </template>
 
