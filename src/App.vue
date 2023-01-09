@@ -4,78 +4,12 @@ import AppFooter from './components/AppFooter.vue'
 import AppNav from './components/AppNav.vue'
 import AppMain from './components/AppMain.vue'
 
-import axios from 'axios';
-
-import { store } from './store.js';
-
 export default {
   components: {
     AppHeader,
     AppFooter,
     AppNav,
     AppMain
-  },
-  data() {
-    return {
-      store
-    }
-  },
-  methods: {
-    getAlbums() {
-      const options = {
-        method: 'GET',
-        url: 'https://spotify81.p.rapidapi.com/albums',
-        params: { ids: '6PFPjumGRpZnBzqnDci6qJ,4Gfnly5CzMJQqkUFfoHaP3,2ANVost0y2y52ema1E9xAZ,6mUdeDZCsExyJLMdAfDuwh,6i6folBtxKV28WX3msQ4FE,4isNDcdh05jGd91v2h6tbC' },
-        headers: {
-          'X-RapidAPI-Key': 'baf622d4edmshd85bb4f97fcc4aep15feaajsne026f2c5830b',
-          'X-RapidAPI-Host': 'spotify81.p.rapidapi.com'
-        }
-      };
-
-      axios.request(options).then(function (response) {
-        store.albums = response.data.albums;
-      }).catch(function (error) {
-        console.error(error);
-      });
-    },
-    getArtists() {
-      const options = {
-        method: 'GET',
-        url: 'https://spotify81.p.rapidapi.com/artists',
-        params: { ids: '6XyY86QOPPrYVGvF9ch6wz,3fMbdgg4jU18AjLCKBhRSm,711MCceyCBcFnzjGY4Q7Un,1dfeR4HaWDbWqFHLkxsg1d' },
-        headers: {
-          'X-RapidAPI-Key': 'baf622d4edmshd85bb4f97fcc4aep15feaajsne026f2c5830b',
-          'X-RapidAPI-Host': 'spotify81.p.rapidapi.com'
-        }
-      };
-
-      axios.request(options).then(function (response) {
-        store.artists = response.data.artists;
-      }).catch(function (error) {
-        console.error(error);
-      });
-    },
-    getMostListened() {
-      const options = {
-        method: 'GET',
-        url: 'https://spotify81.p.rapidapi.com/top_20_by_monthly_listeners',
-        headers: {
-          'X-RapidAPI-Key': 'baf622d4edmshd85bb4f97fcc4aep15feaajsne026f2c5830b',
-          'X-RapidAPI-Host': 'spotify81.p.rapidapi.com'
-        }
-      };
-
-      axios.request(options).then(function (response) {
-        store.moreListened = response.data;
-      }).catch(function (error) {
-        console.error(error);
-      });
-    }
-  },
-  mounted() {
-    this.getAlbums();
-    this.getArtists();
-    this.getMostListened();
   }
 }
 </script>
@@ -155,7 +89,8 @@ main {
     color: #fff;
 
     .card {
-      width: calc(100% / 6);
+      width: calc(100% / 6 - 10px);
+      margin: 0 5px;
       text-align: center;
       padding-right: 15px;
       padding-bottom: 25px;
@@ -165,7 +100,6 @@ main {
       }
 
       img {
-        height: 193px;
         object-fit: cover;
       }
 
@@ -266,7 +200,7 @@ main {
     section {
       .list-cards {
         .card {
-          width: calc(100% / 2);
+          width: calc(100% / 2 - 10px);
         }
       }
     }
