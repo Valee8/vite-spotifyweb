@@ -3,7 +3,7 @@
 import { store } from '../store.js';
 
 export default {
-    name: "RecentlyPlayed",
+    name: "YourSearches",
     data() {
         return {
             store,
@@ -38,7 +38,7 @@ export default {
         <!-- Lista card -->
         <div class="list-cards">
 
-            <div class="card" v-for="album in store.cardList">
+            <div class="card" v-for="(album, index) in store.cardList" :key="index">
 
                 <a :href="album.shareUrl" target="_blank">
                     <div class="card-img">

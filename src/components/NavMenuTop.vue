@@ -55,7 +55,7 @@ export default {
 
             store.options = this.options.params.term;
 
-            console.log("Store", store.search);
+            console.log(store.search);
 
             axios.request(this.options).then(function (response) {
                 store.cardList = response.data.albums.items;
